@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+#define NULL nullptr 
 
 class Node {
 public:
@@ -10,4 +12,5 @@ class List {
 public:
 	Node* head = NULL;
 	Node* InsertNode(int info, int index);
+	void TraverseList(void);
 };

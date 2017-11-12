@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "Header.h"
 
+
 using namespace std;
 
 int main()
@@ -12,6 +13,12 @@ int main()
 	LinkedList.InsertNode(47, 0);
 	LinkedList.InsertNode(12, 1);
 	LinkedList.InsertNode(92, 2);
+	LinkedList.InsertNode(65, 3);
+	LinkedList.InsertNode(80, 4);
+	LinkedList.InsertNode(46, 5);
+	LinkedList.InsertNode(5, 6);
+	LinkedList.InsertNode(78, 7);
+	LinkedList.TraverseList();
     return 0;
 }
 
@@ -37,3 +44,13 @@ Node* List::InsertNode(int info, int index) {
 	return newNode;
 }
 
+void List::TraverseList(void) {
+	int ListLength = 0;
+	Node* CurrentNode = head;
+	while (CurrentNode != NULL) {
+		cout << CurrentNode->Info << endl;
+		CurrentNode = CurrentNode->NextLink;
+		ListLength++;
+	}
+	cout << "The list length is " << ListLength << endl;
+}
